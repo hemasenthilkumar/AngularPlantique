@@ -1,0 +1,61 @@
+<div fxLayout fxLayoutAlign="center center">
+  <mat-card fxFlex="30%">
+    <mat-card-title>Plantique Signup <span class="fa fa-leaf fa-lg"></span></mat-card-title>
+    <mat-card-content fxLayout="column">
+      <mat-error *ngIf="errMsg">{{errMsg}}</mat-error>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+<p>
+  <mat-form-field>
+    <input matInput formControlName="username"  type="text" placeholder="User name" required>
+    <mat-error *ngIf="signupForm.controls['username'].touched && signupForm.controls['username'].errors?.required">Username required</mat-error>
+    <mat-error *ngIf="signupForm.controls['username'].touched && signupForm.controls['username'].errors?.minlength">Username should be minimum 5 characters</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="emailId" type="text" pattern='^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$' placeholder="Email Id" required>
+    <mat-error *ngIf="signupForm.controls['emailId'].touched && signupForm.controls['emailId'].errors?.required">Email required</mat-error>
+    <mat-error *ngIf="signupForm.controls['emailId'].touched && signupForm.controls['emailId'].errors?.pattern">Invalid Email Id</mat-error>
+  </mat-form-field>
+  
+</p>
+<p>
+  <mat-form-field>
+    <input matInput formControlName="password" type="password" placeholder="Password" required>
+    <mat-error *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].errors?.required">Password required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="confirmPassword"  type="password" placeholder="Confirm Password" required>
+    <mat-error *ngIf="signupForm.controls['confirmPassword'].touched && signupForm.controls['confirmPassword'].errors?.required">Confirm Password required</mat-error>
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field>
+    <!-- <input matInput formControlName="userType"  type="text" placeholder="User Type" required> -->
+    <mat-select placeholder="User Type" formControlName="userType">
+      <mat-option *ngFor="let ctype of usertype" [value]="ctype">
+        {{ ctype }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="signupForm.controls['userType'].touched && signupForm.controls['userType'].errors?.required">User Type required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <!-- <input matInput formControlName="birthDate" type="text" placeholder="Birth Date" required> -->
+    <input matInput formControlName="birthDate" placeholder="Birth Date" [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="signupForm.controls['birthDate'].touched && signupForm.controls['birthDate'].errors?.required">Birth date required</mat-error>
+  </mat-form-field>
+</p>
+
+
+<p>
+  <button type="submit" [disabled]="signupForm.invalid" mat-raised-button class="light-button">Signup</button>
+  &nbsp;
+  <button routerLink='/login' mat-raised-button class="dark-button">Login</button>
+</p>
+</form>
+</mat-card-content>
+</mat-card>
+</div>
