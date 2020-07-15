@@ -21,4 +21,9 @@ export class PlantiqueService {
     
     return this.http.get(this.baseUrl+"register?info="+JSON.stringify(user));
   }
+
+  getPosts(us)
+  {
+    return this.http.get(this.baseUrl+"userhome?usname="+us);
+  }
 }

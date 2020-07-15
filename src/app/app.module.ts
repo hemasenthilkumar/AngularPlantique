@@ -22,13 +22,15 @@ import {MatNativeDateModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpModule} from '@angular/http';
 import { PlantiqueService } from './services/plantique.service';
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
+import { MainComponent } from './main/main.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import { DatePipe } from '@angular/common'
       {path:'login',component:LoginComponent},
       {path:'',component:HomeComponent},
       {path:'signup',component:SignupComponent},
+      {path:'main',component:MainComponent}
     ])
 
   ],
