@@ -1,0 +1,17 @@
+
+      <div>
+            <div *ngFor="let p of posts">
+                  <mat-card class="mat-elevation-z2">
+                  <mat-card-header> <h3>{{p.username}}</h3> </mat-card-header>
+                    <mat-card-content>
+                           <div *ngFor="let p0 of p.posts">
+                                    <h4>{{p0.text}}</h4> 
+                                    <h5><i>Posted on {{p0.date}}</i></h5> 
+                            </div>
+                            
+                    </mat-card-content>
+                  </mat-card>
+                  <br>
+            </div>
+        </div>
+  

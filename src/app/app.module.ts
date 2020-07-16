@@ -23,6 +23,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpModule} from '@angular/http';
 import { PlantiqueService } from './services/plantique.service';
 import { DatePipe } from '@angular/common';
+import { ViewpostsComponent } from './viewposts/viewposts.component';
 import { MainComponent } from './main/main.component'
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MainComponent } from './main/main.component'
     HomeComponent,
     LoginComponent,
     SignupComponent,
+    ViewpostsComponent,
     MainComponent
   ],
   imports: [
@@ -54,7 +56,7 @@ import { MainComponent } from './main/main.component'
       {path:'login',component:LoginComponent},
       {path:'',component:HomeComponent},
       {path:'signup',component:SignupComponent},
-      {path:'main',component:MainComponent}
+      {path:'posts',component:ViewpostsComponent}
     ])
 
   ],

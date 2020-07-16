@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     .subscribe(response=>
       {
         console.log(response);
-        this.route.navigate(['main']);
+        this.route.navigate(['posts']);
       },error=>
       {
         this.errMsg=error;
