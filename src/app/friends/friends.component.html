@@ -1,0 +1,8 @@
+<table>
+  <div *ngFor="let f of friend | keyvalue">
+    <tr>
+      <td  style="width:90px">{{f.key}}</td> 
+      <td><button style="width:100px" mat-raised-button  class="light-button mat-elevation-z7"><h4  *ngIf="f.value===0">Follow</h4><h4 *ngIf="f.value===1">Unfollow</h4></button></td>
+    </tr>
+    </div>
+</table>

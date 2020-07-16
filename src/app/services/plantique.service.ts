@@ -26,4 +26,10 @@ export class PlantiqueService {
   {
     return this.http.get(this.baseUrl+"userhome?usname="+us);
   }
+
+  getFriends(us)
+  {
+    return this.http.get(this.baseUrl+"friends?usname="+us);
+  }
+
 }

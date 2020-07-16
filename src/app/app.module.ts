@@ -25,6 +25,9 @@ import { PlantiqueService } from './services/plantique.service';
 import { DatePipe } from '@angular/common';
 import { ViewpostsComponent } from './viewposts/viewposts.component';
 import { MainComponent } from './main/main.component'
+import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+import { FriendsComponent } from './friends/friends.component';
+import {MatTableModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import { MainComponent } from './main/main.component'
     LoginComponent,
     SignupComponent,
     ViewpostsComponent,
-    MainComponent
+    MainComponent,
+    FriendsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,12 +55,16 @@ import { MainComponent } from './main/main.component'
     MatDatepickerModule,
     MatNativeDateModule,
     BrowserAnimationsModule,
+    MatTableModule,
     HttpModule,
+    NavbarModule, WavesModule, ButtonsModule,
      RouterModule.forRoot([
       {path:'login',component:LoginComponent},
       {path:'',component:HomeComponent},
       {path:'signup',component:SignupComponent},
-      {path:'posts',component:ViewpostsComponent}
+      {path:'posts',component:ViewpostsComponent},
+      {path:'main',component:MainComponent},
+      {path:'friend',component:FriendsComponent}
     ])
 
   ],
