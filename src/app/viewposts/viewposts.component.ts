@@ -46,22 +46,21 @@ export class ViewpostsComponent implements OnInit {
           POST.username=j;
           POST.posts.push(p);
         }
-        
         this.posts.push(POST);
 
     }
-
-    console.log(this.posts);
-    for(let p of this.posts)
-    {
-      console.log(p.username);
-      console.log(p.posts);
-  p.posts.forEach(element=>
-    {
-      console.log(element.date);
-      console.log(element.text);
-    })
-    }
+  
+  //   console.log(this.posts);
+  //   for(let p of this.posts)
+  //   {
+  //     console.log(p.username);
+  //     console.log(p.posts);
+  // p.posts.forEach(element=>
+  //   {
+  //     console.log(element.date);
+  //     console.log(element.text);
+  //   })
+  //   }
     
     // for(let result of this.json){
     //   console.log(result[0]);

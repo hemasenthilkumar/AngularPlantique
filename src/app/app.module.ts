@@ -28,6 +28,10 @@ import { MainComponent } from './main/main.component'
 import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
 import { FriendsComponent } from './friends/friends.component';
 import {MatTableModule} from '@angular/material';
+import { UserActionsComponent } from './user-actions/user-actions.component';
+import {MatProgressSpinnerModule} from '@angular/material';
+import { InfoComponent } from './info/info.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +40,10 @@ import {MatTableModule} from '@angular/material';
     SignupComponent,
     ViewpostsComponent,
     MainComponent,
-    FriendsComponent
+    FriendsComponent,
+    UserActionsComponent,
+    InfoComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +63,7 @@ import {MatTableModule} from '@angular/material';
     MatNativeDateModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatProgressSpinnerModule,
     HttpModule,
     NavbarModule, WavesModule, ButtonsModule,
      RouterModule.forRoot([
@@ -64,11 +72,14 @@ import {MatTableModule} from '@angular/material';
       {path:'signup',component:SignupComponent},
       {path:'posts',component:ViewpostsComponent},
       {path:'main',component:MainComponent},
-      {path:'friend',component:FriendsComponent}
+      {path:'friend',component:FriendsComponent},
+      {path:'actions',component:UserActionsComponent}
     ])
 
   ],
-
+  entryComponents: [
+    CartComponent
+],
   providers: [PlantiqueService,DatePipe],
   bootstrap: [AppComponent]
 })

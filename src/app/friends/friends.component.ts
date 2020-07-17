@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class FriendsComponent implements OnInit {
  friend:any;
  dataSource;
- displayedColumns: string[] = ['username', 'status'];
+ isloaded;
  conn:Connections[];
 con:Connections;
   constructor(private service:PlantiqueService,private router:Router) { }
@@ -57,7 +57,7 @@ con:Connections;
   {
       this.service.connect("hema",folname,value).subscribe(
         response=>{
-          this.router.navigate(['friend']);
+          this.ngOnInit()
         }
       );
    

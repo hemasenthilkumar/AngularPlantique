@@ -1,7 +1,7 @@
-
+<!-- 
       <div>
             <div *ngFor="let p of posts">
-                  <mat-card class="mat-elevation-z2">
+                  <mat-card style="width:30%" class="mat-elevation-z2">
                   <mat-card-header> <h3>{{p.username}}</h3> </mat-card-header>
                     <mat-card-content>
                            <div *ngFor="let p0 of p.posts">
@@ -13,5 +13,27 @@
                   </mat-card>
                   <br>
             </div>
+        </div>
+   -->
+
+        <div>
+            <div *ngFor="let p of posts">
+                  <div *ngFor="let p0 of p.posts">
+                  <mat-card style="width:90%" class="mat-elevation-z8">
+                  <mat-card-header>
+                        <div mat-card-avatar><i class="fa fa-envira fa-2x" aria-hidden="true"></i></div>
+                        <mat-card-title>{{p0.text}}</mat-card-title>
+                        <mat-card-subtitle>Plantique User</mat-card-subtitle>
+                  </mat-card-header>
+                    <mat-card-content>
+                                    <h4>{{p.username}}</h4> 
+                                    <h5><i>Posted on {{p0.date}}</i></h5> 
+                    </mat-card-content>
+                  </mat-card>
+                  <br>
+            </div>
+            <br>
+            </div>
+            <br>
         </div>
   

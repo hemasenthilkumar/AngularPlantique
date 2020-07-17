@@ -1,9 +1,13 @@
 
 
-<table>
+<table *ngIf="conn">
   <div *ngFor="let c of conn">
     <tr>
-      <td  style="width:100px">{{c.username}}</td> 
+      <td class="mat-elevation-z7" style="width:100px">{{c.username}}</td> &nbsp;
       <td><button style="width:100px;color:white"  (click)="follow(c.username,c.value)" mat-raised-button class="light-button mat-elevation-z7">{{c.status}}</button>
+        </td>
+        </tr>
+        <br>
     </div>
 </table>
+
