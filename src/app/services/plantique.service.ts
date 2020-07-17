@@ -32,6 +32,16 @@ export class PlantiqueService {
     return this.http.get(this.baseUrl+"friends?usname="+us);
   }
 
+  getFriendRoles(us)
+  {
+    return this.http.get(this.baseUrl+"friend?usname="+us);
+  }
+
+  postFeed(us,post)
+  {
+    return this.http.get(this.baseUrl+"feeds?us="+us+"&usp="+post);
+  }
+
   connect(us,folname,value)
   {
     return this.http.get(this.baseUrl+"follow?usname="+us+"&folname="+folname+"&value="+value);

@@ -1,9 +1,22 @@
 
 
-<table *ngIf="conn">
-  <div *ngFor="let c of conn">
+<table *ngIf="conroles">
+  <div *ngFor="let c of conroles">
     <tr>
-      <td class="mat-elevation-z7" style="width:100px">{{c.username}}</td> &nbsp;
+      <td class="mat-elevation-z7" style="width:250px">
+        <!-- {{c.username}} -->
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{c.username}} 
+            </mat-panel-title>
+            <mat-panel-description>
+              <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <i>The user is {{c.role}}</i>
+        </mat-expansion-panel>
+      </td> &nbsp;
       <td><button style="width:100px;color:white"  (click)="follow(c.username,c.value)" mat-raised-button class="light-button mat-elevation-z7">{{c.status}}</button>
         </td>
         </tr>

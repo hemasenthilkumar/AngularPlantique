@@ -32,6 +32,8 @@ import { UserActionsComponent } from './user-actions/user-actions.component';
 import {MatProgressSpinnerModule} from '@angular/material';
 import { InfoComponent } from './info/info.component';
 import { CartComponent } from './cart/cart.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { PostComponent } from './post/post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,8 @@ import { CartComponent } from './cart/cart.component';
     FriendsComponent,
     UserActionsComponent,
     InfoComponent,
-    CartComponent
+    CartComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { CartComponent } from './cart/cart.component';
     MatListModule,
     MatCardModule,
     MatSelectModule,
+    MatExpansionModule,
     MatGridListModule,
     MatDatepickerModule,
     MatNativeDateModule,

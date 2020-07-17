@@ -18,6 +18,7 @@ export class ViewpostsComponent implements OnInit {
 
   ngOnInit() 
   {
+     console.log("Posts initiated");
     this.posts=new Array();
     this.loadPosts();
   }
@@ -68,6 +69,11 @@ export class ViewpostsComponent implements OnInit {
     // }
     // console.log(this.list);
 
+  }
+
+  refresh()
+  {
+    this.ngOnInit();
   }
 
 }
