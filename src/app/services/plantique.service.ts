@@ -32,4 +32,9 @@ export class PlantiqueService {
     return this.http.get(this.baseUrl+"friends?usname="+us);
   }
 
+  connect(us,folname,value)
+  {
+    return this.http.get(this.baseUrl+"follow?usname="+us+"&folname="+folname+"&value="+value);
+  }
+
 }
