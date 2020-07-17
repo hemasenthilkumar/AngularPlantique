@@ -10,10 +10,17 @@
   .light
   {
     color:green;
+    background-color: white;
   }
 
   .corner{
     position:absolute;
     top:10px;
     right:0;
+   }
+
+   .colors
+   {
+     background-image: url('/assets/bg1.jpg');
+     height:40px;
    }

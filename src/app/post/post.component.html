@@ -3,7 +3,6 @@
   <mat-form-field class="example-full-width">
     <mat-label>Post Something Greeny!</mat-label>
     <input matInput formControlName="post" name="post" placeholder="How are you feelin today?" required> &nbsp;
-    <mat-error *ngIf="postForm.controls['post'].touched && postForm.controls['post'].errors?.required">Post feed required</mat-error>
     <button mat-button matSuffix type="submit" [disabled]="postForm.invalid" class="light-button"><i class="fa fa-check" aria-hidden="true"></i></button>
   </mat-form-field>
  
