@@ -1,0 +1,35 @@
+<div *ngIf="orders&&orders.length>0">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Items">
+      <th mat-header-cell *matHeaderCellDef> Items</th>
+      <td mat-cell *matCellDef="let element"> <p> {{element.list_P}}</p> </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Amount paid">
+      <th mat-header-cell *matHeaderCellDef> Amount paid </th>
+      <td mat-cell *matCellDef="let element"> {{element.total}} <i matSuffix class="fa fa-inr" aria-hidden="true"></i> </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Order date">
+      <th mat-header-cell *matHeaderCellDef> Order date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}}  </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <br>
+  <br>
+  </div>
+  
+  <div *ngIf="orders&&orders.length == 0">
+   There are no orders yet ...
+    </div> 
+  

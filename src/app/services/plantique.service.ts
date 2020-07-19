@@ -72,4 +72,9 @@ export class PlantiqueService {
     return this.http.get(this.baseUrl+"Emptycart?usname="+us+"&tot="+total);
   }
 
+  getOrders(us)
+  {
+    return this.http.get(this.baseUrl+"Orders?usname="+us);
+  }
+
 }

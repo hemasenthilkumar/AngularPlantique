@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material';
 import { PlantiqueService } from '../services/plantique.service';
 
-export interface cartItems {
-  name: string;
-  price:string;
-  actions:string;
-}
+
 
 @Component({
   selector: 'app-cart',

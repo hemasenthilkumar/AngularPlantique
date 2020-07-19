@@ -37,6 +37,7 @@ import { PostComponent } from './post/post.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { MyproductsComponent } from './myproducts/myproducts.component';
 import {MatIconModule} from '@angular/material/icon';
+import { OrdersComponent } from './orders/orders.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import {MatIconModule} from '@angular/material/icon';
     CartComponent,
     PostComponent,
     PurchaseComponent,
-    MyproductsComponent
+    MyproductsComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,8 @@ import {MatIconModule} from '@angular/material/icon';
 
   ],
   entryComponents: [
-    CartComponent
+    CartComponent,
+    OrdersComponent
 ],
   providers: [PlantiqueService,DatePipe],
   bootstrap: [AppComponent]

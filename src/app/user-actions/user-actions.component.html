@@ -6,7 +6,7 @@
 <div>
 <button mat-button  class="mat-elevation-z6 light" routerLinkActive='active' routerLink='/myproducts' color="primary"><i class="fa fa-pagelines fa-lg" aria-hidden="true"></i>  My products</button> &nbsp;
 <button mat-button  class="mat-elevation-z6 light"  routerLinkActive='active' color="primary"><i class="fa fa-user fa-lg" aria-hidden="true"></i>  My profile</button>&nbsp;
-<button mat-button class="mat-elevation-z6 light"  routerLinkActive='active' color="primary"><i class="fa fa-book fa-lg" aria-hidden="true"></i>  My orders</button>&nbsp;
+<button mat-button class="mat-elevation-z6 light"  routerLinkActive='active' (click)="openOrders()" color="primary"><i class="fa fa-book fa-lg" aria-hidden="true"></i>  My orders</button>&nbsp;
 <button mat-button  class="mat-elevation-z6 light" routerLinkActive='active' (click)="openCart()" color="primary"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>  My cart</button>&nbsp;
 <button mat-button  class="mat-elevation-z6 light" routerLinkActive='active' routerLink='/purchase' color="primary"><i class="fa fa-money fa-lg" aria-hidden="true"></i>  Purchase</button>&nbsp;
 <button mat-button  class="mat-elevation-z6 light" routerLinkActive='active' color="primary"><i class="fa fa-plus fa-lg" aria-hidden="true"></i>  Add product</button>&nbsp;
