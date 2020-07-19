@@ -34,6 +34,9 @@ import { InfoComponent } from './info/info.component';
 import { CartComponent } from './cart/cart.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { PostComponent } from './post/post.component';
+import { PurchaseComponent } from './purchase/purchase.component';
+import { MyproductsComponent } from './myproducts/myproducts.component';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,9 @@ import { PostComponent } from './post/post.component';
     UserActionsComponent,
     InfoComponent,
     CartComponent,
-    PostComponent
+    PostComponent,
+    PurchaseComponent,
+    MyproductsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +74,7 @@ import { PostComponent } from './post/post.component';
     MatTableModule,
     MatProgressSpinnerModule,
     HttpModule,
+    MatIconModule,
     NavbarModule, WavesModule, ButtonsModule,
      RouterModule.forRoot([
       {path:'login',component:LoginComponent},
@@ -77,7 +83,9 @@ import { PostComponent } from './post/post.component';
       {path:'posts',component:ViewpostsComponent},
       {path:'main',component:MainComponent},
       {path:'friend',component:FriendsComponent},
-      {path:'actions',component:UserActionsComponent}
+      {path:'actions',component:UserActionsComponent},
+      {path:'purchase',component:PurchaseComponent},
+      {path:'myproducts',component:MyproductsComponent}
     ])
 
   ],

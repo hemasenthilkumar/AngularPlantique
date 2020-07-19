@@ -16,7 +16,7 @@
         </div>
    -->
 
-        <div>
+        <div *ngIf="posts">
             <div *ngFor="let p of posts">
                   <div *ngFor="let p0 of p.posts">
                   <mat-card style="width:90%" class="mat-elevation-z8">
@@ -36,4 +36,9 @@
             </div>
             <br>
         </div>
+
+        <div fxFlex [hidden]="posts">
+            <mat-spinner></mat-spinner><h4>Loading . . . Please wait</h4>
+          </div>
+          
   

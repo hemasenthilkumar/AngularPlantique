@@ -1,0 +1,36 @@
+<app-user-actions></app-user-actions>
+<br>
+<br>
+<br>
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="50px"
+     fxLayoutGap.xs="10px">
+
+
+     <div fxFlex *ngIf="products">
+      <mat-grid-list cols="4" rowHeight="300px">
+      <mat-grid-tile *ngFor="let p of products">
+        <mat-card style="width:70%" class="mat-elevation-z8">
+          <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{p.plant_name}}</mat-card-title>
+                <mat-card-subtitle>Owned by {{p.username}}</mat-card-subtitle>
+          </mat-card-header>
+            <mat-card-content>
+                            <p>Plant details</p>
+                            <p>Plant id: {{p.product_id}} </p> 
+                            <p>Price: {{p.price}} <i matSuffix class="fa fa-inr" aria-hidden="true"></i></p>
+                            <p>Category: {{p.category}} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button class="light">REMOVE</button>
+            </mat-card-actions>
+          </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    </div>
+
+</div>

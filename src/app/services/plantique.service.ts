@@ -47,4 +47,29 @@ export class PlantiqueService {
     return this.http.get(this.baseUrl+"follow?usname="+us+"&folname="+folname+"&value="+value);
   }
 
+  getProducts(us)
+  {
+    return this.http.get(this.baseUrl+"viewProduct?usname="+us);
+  }
+
+  getPurchaseProducts(us)
+  {
+    return this.http.get(this.baseUrl+"purchases?usname="+us);
+  }
+
+  addToCart(us,ps)
+  {
+    return this.http.get(this.baseUrl+"cart?usname="+us+"&product="+ps);
+  }
+
+  getCart(us)
+  {
+    return this.http.get(this.baseUrl+"showCart?usname="+us);
+  }
+
+  emptyCart(us,total)
+  {
+    return this.http.get(this.baseUrl+"Emptycart?usname="+us+"&tot="+total);
+  }
+
 }
